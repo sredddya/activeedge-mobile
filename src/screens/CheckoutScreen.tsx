@@ -36,7 +36,7 @@ export default function CheckoutScreen({ navigation }: any) {
       }
       clearCart();
       Alert.alert('Order Placed!', 'Your order has been placed successfully.', [
-        { text: 'OK', onPress: () => navigation.navigate('Home') }
+        { text: 'OK', onPress: () => navigation.getParent()?.navigate('Shop') }
       ]);
     } catch (err) {
       Alert.alert('Error', 'Failed to place order. Please try again.');

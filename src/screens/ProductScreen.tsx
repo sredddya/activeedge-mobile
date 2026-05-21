@@ -29,7 +29,7 @@ export default function ProductScreen({ route, navigation }: any) {
     });
     Alert.alert('Added to Cart', `${product.name}${sizeName} added to your cart`, [
       { text: 'Continue Shopping', onPress: () => navigation.goBack() },
-      { text: 'View Cart', onPress: () => navigation.navigate('Cart') },
+      { text: 'View Cart', onPress: () => navigation.getParent()?.navigate('CartTab') },
     ]);
   };
 

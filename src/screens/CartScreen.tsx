@@ -13,7 +13,7 @@ export default function CartScreen({ navigation }: any) {
         <Text style={styles.header}>YOUR CART</Text>
         <View style={styles.empty}>
           <Text style={styles.emptyText}>Your cart is empty</Text>
-          <TouchableOpacity style={styles.shopBtn} onPress={() => navigation.navigate('Shop')}>
+          <TouchableOpacity style={styles.shopBtn} onPress={() => navigation.getParent()?.navigate('Shop')}>
             <Text style={styles.shopBtnText}>CONTINUE SHOPPING</Text>
           </TouchableOpacity>
         </View>
