@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://192.168.1.190:8000',
+  baseURL: 'https://active-edge-backend.onrender.com',
 });
 
 api.interceptors.request.use(async (config) => {

@@ -18,7 +18,7 @@ export default function LoginScreen({ navigation }: any) {
     }
     setIsLoading(true);
     try {
-      const res = await axios.post('http://192.168.1.190:8000/api/token/', {
+      const res = await axios.post('https://active-edge-backend.onrender.com/api/token/', {
         username,
         password,
       });

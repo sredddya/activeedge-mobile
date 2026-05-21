@@ -29,7 +29,7 @@ export default function CheckoutScreen({ navigation }: any) {
     try {
       for (const item of items) {
         await axios.post(
-          'http://192.168.1.190:8000/api/orders/',
+          'https://active-edge-backend.onrender.com/api/orders/',
           { product: item.id, quantity: item.quantity },
           { headers: { Authorization: `Bearer ${token}` } }
         );
